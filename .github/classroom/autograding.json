@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Lauffähigkeit",
+      "setup": "sudo -H pip3 install -r requirements.txt",
+      "run": "pytest -k \"test1\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+    ]
