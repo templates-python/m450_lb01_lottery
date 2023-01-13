@@ -7,8 +7,9 @@ def login():
     while person is None:
         password = input('Passwort > ')
         for temp in people_list:
-            if person.password == password:
+            if temp.password == password:
                 person = temp
+                break
             else:
                 print('Passwort falsch')
 

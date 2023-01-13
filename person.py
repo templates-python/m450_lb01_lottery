@@ -34,5 +34,6 @@ class Person:
     def balance(self, value):
         self._balance = value
 
+
 if __name__ == '__main__':
     pass

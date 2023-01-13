@@ -1,18 +1,18 @@
 from authenticate import login
+from lottery import create_ticket
 from menu import select_menu
 from money import transfer_money
 
 
 def main():
-    people_list = list()
-    person = login(people_list)
+    person = login()
     item = ''
     while item != 'Z':
         item = select_menu()
         if item == 'A':
             transfer_money(person)
         elif item == 'B':
-            pass
+            create_ticket(person)
 
 
 

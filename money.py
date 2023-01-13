@@ -2,6 +2,10 @@ from numeric_input import read_float
 
 
 def transfer_money(person):
+    """
+    deposit or withdraw an amount
+    @param person: the person object
+    """
     transaction = select_transaction()
     while transaction != 'Z':
         if transaction == 'A':
@@ -16,6 +20,9 @@ def transfer_money(person):
 
 
 def select_transaction():
+    """
+    select the type of the transaction
+    """
     selection = ''
     while selection == '':
         selection = input('Auswahl (A, E oder Z) > ')

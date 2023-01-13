@@ -20,10 +20,11 @@ class Ticket:
     @property
     def numbers(self):
         return self._numbers
-    
+
     @numbers.setter
     def numbers(self, value):
         self._numbers = value
+
 
 if __name__ == '__main__':
     pass
