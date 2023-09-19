@@ -15,7 +15,11 @@ class Ticket:
 
     @joker.setter
     def joker(self, value):
-        self._joker = int(value)
+        try:
+            self._joker = int(value)
+        except ValueError:
+            self._joker = 0
+            raise ValueError
 
     @property
     def numbers(self):

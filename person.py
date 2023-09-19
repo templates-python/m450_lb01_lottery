@@ -11,11 +11,11 @@ class Person:
     balance: int
 
     @property
-    def name(self):
+    def givenname(self):
         return self._givenname
 
     @givenname.setter
-    def name(self, value):
+    def givenname(self, value):
         self._givenname = value
 
     @property
@@ -32,7 +32,11 @@ class Person:
 
     @balance.setter
     def balance(self, value):
-        self._balance = value
+        try:
+            self._balance = float(value)
+        except ValueError:
+            self._balance = -1.0
+            raise ValueError
 
 
 if __name__ == '__main__':
