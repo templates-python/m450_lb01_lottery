@@ -32,8 +32,8 @@ class Person:
 
     @balance.setter
     def balance(self, value):
-        self._balance = float(value)
-
-
-if __name__ == '__main__':
-    pass
+        try:
+            self._balance = float(value)
+        except ValueError:
+            self._balance = -1.0
+            raise ValueError

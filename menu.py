@@ -25,6 +25,3 @@ def select_menu():
             print('Bitte geben Sie eine gültige Wahl ein')
 
     return selection
-
-if __name__ == '__main__':
-    pass
