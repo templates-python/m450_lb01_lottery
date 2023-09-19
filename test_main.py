@@ -18,30 +18,26 @@ def test_main_exit(capsys, monkeypatch):
     monkeypatch.setattr(main, 'login', dummy_login)
     main.main()
     output = capsys.readouterr().out
-    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\n' \
-                     'Z) Beenden\n'
+    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\nZ) Beenden\n'
 
 
 def test_main_money(capsys, monkeypatch):
-    inputs = iter(['geheim', 'A', 'Z', 'Z'])
     inputs = iter(['A', 'Z'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     monkeypatch.setattr(main, 'login', dummy_login)
     monkeypatch.setattr(main, 'transfer_money', dummy_transfer)
     main.main()
     output = capsys.readouterr().out
-    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\n' \
+    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\nZ) Beenden\n' \
+                     'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\nZ) Beenden\n'
 
 
 def test_main_ticket(capsys, monkeypatch):
-    inputs = iter(['geheim', 'B', 'Z', 'Z'])
     inputs = iter(['B', 'Z'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     monkeypatch.setattr(main, 'login', dummy_login)
     monkeypatch.setattr(main, 'create_ticket', dummy_ticket)
     main.main()
     output = capsys.readouterr().out
-    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\n' \
-                     'Z) Beenden\ndummy\nLotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\n' \
-                     'Z) Beenden\nLotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\n' \
-                     'B) Lottotipps abgeben\nZ) Beenden\n'
+    assert output == 'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\nZ) Beenden\n' \
+                     'Lotto\n---------\nA) Konto Ein- und Auszahlungen tätigen\nB) Lottotipps abgeben\nZ) Beenden\n'
