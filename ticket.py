@@ -23,7 +23,10 @@ class Ticket:
 
     @numbers.setter
     def numbers(self, value):
-        self._numbers = value
+        if isinstance(value, list):
+            self._numbers = value
+        else:
+            raise ValueError
 
 
 if __name__ == '__main__':
