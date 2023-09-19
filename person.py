@@ -6,25 +6,25 @@ class Person:
     """
     a person playing the lottery
     """
-    name: str
+    givenname: str
     password: str
     balance: int
 
     @property
     def name(self):
-        return self._firstname
+        return self._givenname
 
-    @name.setter
+    @givenname.setter
     def name(self, value):
-        self._firstname = value
+        self._givenname = value
 
     @property
     def password(self):
-        return self._lastname
+        return self._password
 
     @password.setter
     def password(self, value):
-        self._lastname = value
+        self._password = value
 
     @property
     def balance(self):

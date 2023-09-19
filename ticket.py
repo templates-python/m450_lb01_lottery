@@ -11,11 +11,11 @@ class Ticket:
 
     @property
     def joker(self):
-        return self._num_draws
+        return self._joker
 
     @joker.setter
     def joker(self, value):
-        self._num_draws = value
+        self._joker = int(value)
 
     @property
     def numbers(self):
