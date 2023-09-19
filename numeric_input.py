@@ -38,3 +38,7 @@ def read_float(prompt, minimum, maximum):
             print('Geben Sie eine Zahl ein')
 
     return number
+
+
+if __name__ == '__main__':
+    pass

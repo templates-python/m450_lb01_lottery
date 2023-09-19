@@ -27,3 +27,6 @@ def load_people():
     people_list.append(Person('Beatrice', 'passWORT', 23.00))
     return people_list
 
+
+if __name__ == '__main__':
+    pass

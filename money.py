@@ -30,3 +30,7 @@ def select_transaction():
             print('Geben Sie eine gültige Auswahl ein')
             selection = ''
     return selection
+
+
+if __name__ == '__main__':
+    pass
