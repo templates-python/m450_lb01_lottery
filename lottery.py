@@ -46,7 +46,3 @@ def print_ticket(ticket):
         if count % 6 == 0:
             print()     # creates a new line
     print(f'\n\nJokerzahl: {ticket.joker:2d}')
-
-
-if __name__ == '__main__':
-    pass

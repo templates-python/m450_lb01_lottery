@@ -37,7 +37,3 @@ class Person:
         except ValueError:
             self._balance = -1.0
             raise ValueError
-
-
-if __name__ == '__main__':
-    pass
