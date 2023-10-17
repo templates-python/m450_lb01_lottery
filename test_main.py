@@ -1,15 +1,20 @@
 import main
+
+
 # monkeypatch to replace the function 'create_ticket' in main
 def dummy_ticket(person):
     pass
+
 
 # monkeypatch to replace the function 'login' in main
 def dummy_login():
     pass
 
+
 # monkeypatch to replace the function 'transfer_money' in main
 def dummy_transfer(person):
     pass
+
 
 def test_main_exit(capsys, monkeypatch):
     inputs = iter(['Z'])
