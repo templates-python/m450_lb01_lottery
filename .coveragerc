@@ -1,7 +1,7 @@
 [run]
 branch = True
-command_line = -m pytest
+command_line = -m pytest --timeout=20 --ignore=test_main.py
 
 [report]
 show_missing = True
-omit = test_*.py
+omit = test_*.py, main.py

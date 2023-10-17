@@ -28,7 +28,3 @@ class Ticket:
     @numbers.setter
     def numbers(self, value):
         self._numbers = value
-
-
-if __name__ == '__main__':
-    pass

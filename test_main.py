@@ -12,7 +12,6 @@ def dummy_transfer(person):
     pass
 
 def test_main_exit(capsys, monkeypatch):
-    inputs = iter(['geheim', 'Z'])
     inputs = iter(['Z'])
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
     monkeypatch.setattr(main, 'login', dummy_login)
